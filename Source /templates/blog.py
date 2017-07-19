@@ -32,15 +32,18 @@ class NewPage(webapp2.RequestHandler):
         
 class BlogItPage(webapp2.RequestHandler):
     def post(self):
-        self.response.out.write('<html><body>Title: <pre>')
+        self.response.out.write("""<html><head><title>Blogged It Page</title>
+                                <link href="stylesheets/blogitstyle.css" rel="stylesheet" type="text/css" >
+                                </head>
+                                <body>Title: <pre>""")
         self.response.out.write(cgi.escape(self.request.get('title')))
         self.response.out.write('</pre>Content: <pre>')
         self.response.out.write(cgi.escape(self.request.get('content')))
-        self.response.out.write("""<form action="/mainpage" method="post">
+        self.response.out.write("""</pre><form action="/mainpage" method="post">
                                 <br><div>
                                 <input type="submit" value="Back to Main Page">
                                 </div></form>""")
-        self.response.out.write('</pre></body></html>')
+        self.response.out.write('</body></html>')
         a = self.request.get('title')
         b = self.request.get('content')
         dic[a]=b

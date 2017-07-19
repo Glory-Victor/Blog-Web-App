@@ -10,7 +10,9 @@ html, body {
 
 body {
 	align-items: center;
-    background-color: #FFF;
+    background-image: url('/images/front.png');
+    background-position: center center;
+    background-size: cover;
 	display: flex;
 	font-family: 'Raleway', sans-serif;
 	flex-direction: column;
@@ -21,7 +23,6 @@ body {
 div.container {
 	align-items: center;
 	align-self: center;
-	background: url('images/front.png')center center;
 	display: inline-flex;
 	flex-direction: column;
 	justify-content: center;

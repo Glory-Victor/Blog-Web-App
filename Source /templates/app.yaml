@@ -8,9 +8,8 @@ handlers:
 - url: /stylesheets 
   static_dir: stylesheets
 
-- url: /(/images.(gif|png|jpg))$
-  static_files: /images
-  upload: /images.(gif|png|jpg)$
+- url: /images
+  static_dir: images
 
 - url: /.*
   script: blog.app
